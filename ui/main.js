@@ -1,32 +1,14 @@
-console.log('Loaded!');
+// Counter code
+var button = document.getElementById('counter');
+var counter = 0;
 
-
-// Move the image
-var img = document.getElementById('img');
-var stop = document.getElementById('stop');
-
-var marginLeft = 0;
-var direction = 1;
-var w = document.getElementById('container').offsetWidth-40;
-var interval = [];
-
-function moveRightLeft() {
-    if(marginLeft == w-img.width ) {
-        direction = -1;
-    } 
-    else if(marginLeft == -(w-img.width) ) {
-        direction = 1;
-    }
-    marginLeft = marginLeft + direction;
-    img.style.marginLeft = marginLeft + 'px';
-}
-img.parentElement.onclick = function() {
-    interval.push(setInterval(moveRightLeft, 10));
-};
-
-stop.onclick = function() {
-    for(var i=0; i<interval.length; i++){
-        clearInterval(interval[i]);   
-    }
-    //alert(interval.length);
+button.onclick = function() {
+    // Make a request to the counter endpoint
+    
+    // Capture the response and store it in a variable
+    
+    // Render the variable in the correct span
+    counter = counter + 1;
+    var span = document.getElementById('count');
+    span.innerHTML = counter.toString();
 };
