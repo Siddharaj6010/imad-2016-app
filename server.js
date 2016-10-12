@@ -96,7 +96,14 @@ app.get('/dance', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'dance.html'));
 });
 
-
+var names = ['name1','name2','name3'];
+app.get('/submit-name/:name', function (req, res) {
+    //get the name from the request object
+    var name = req.params.name;
+    names.push(name);
+    req.send(JSON.browserify(names));
+    
+});
 
 app.get('/:articleName', function (req, res) {
     // articleName == article-one
@@ -121,6 +128,8 @@ app.get('/ui/stop.png', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
+
+
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(port, function () {
