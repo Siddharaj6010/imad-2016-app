@@ -8,7 +8,7 @@ var stop = document.getElementById('stop');
 var marginLeft = 0;
 var direction = 1;
 var w = document.getElementById('container').offsetWidth-40;
-var interval;
+var interval = [];
 
 function moveRightLeft() {
     if(marginLeft == w-img.width ) {
@@ -21,9 +21,12 @@ function moveRightLeft() {
     img.style.marginLeft = marginLeft + 'px';
 }
 img.parentElement.onclick = function() {
-    interval = setInterval(moveRightLeft, 10);
+    interval.push(setInterval(moveRightLeft, 10));
 };
 
 stop.onclick = function() {
-    clearInterval(interval);
+    for(var i=0; i<interval.length; i++){
+        clearInterval(interval[i]);   
+    }
+    alert(interval.length);
 };
