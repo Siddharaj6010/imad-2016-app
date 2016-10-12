@@ -4,7 +4,11 @@ console.log('Loaded!');
 
 var element = document.getElementById('main-text');
 
-element.innerHTML = 'Let\'s Dance :D (Click on the above image)';
+element.innerHTML = `
+    Let\'s Dance ;) 
+    <br/>
+    <p>(Click on the above image to start. Click again to increase speed.)</p>
+`;
 
 // Move the image
 var img = document.getElementById('img');
@@ -23,5 +27,5 @@ function moveRightLeft() {
     img.style.marginLeft = marginLeft + 'px';
 }
 img.onclick = function() {
-    var interval = setInterval(moveRightLeft, 1);
+    var interval = setInterval(moveRightLeft, 50);
 };
