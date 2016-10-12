@@ -9,6 +9,6 @@ element.innerHTML = 'New Value';
 // Move the image
 var img = document.getElementById('img');
 
-img.onClick = function() {
+img.onclick = function() {
     img.style.marginLeft = '100px';
 };
