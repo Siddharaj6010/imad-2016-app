@@ -21,3 +21,21 @@ button.onclick = function() {
     request.open('GET','http://siddharaj6010.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+
+// Only read counter value for displaying on page load
+    var request = new XMLHttpRequest();
+    
+    // Capture the response and store it in a variable
+    request.onreadystatechange = function () {
+        if(request.readyState === XMLHttpRequest.DONE) {
+            if(request.status === 200) {
+                var counter = request.responseText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();            
+            }
+        }
+    }
+    
+    // Make the request
+    request.open('GET','http://siddharaj6010.imad.hasura-app.io/counter-read',true);
+    request.send(null);
