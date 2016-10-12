@@ -86,6 +86,12 @@ app.get('/counter', function(req, res){
     res.send(counter.toString());
 });
 
+app.get('/counter-read', function(req, res){
+    res.send(counter.toString());
+});
+
+
+
 app.get('/dance', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'dance.html'));
 });
