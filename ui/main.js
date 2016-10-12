@@ -5,7 +5,7 @@ console.log('Loaded!');
 var img = document.getElementById('img');
 var marginLeft = 0;
 var direction = 1;
-var w = document.getElementsByClassName('container')-40;
+var w = document.getElementsByClassName('container').width-40;
 
 function moveRightLeft() {
     if(marginLeft == w-img.width ) {
