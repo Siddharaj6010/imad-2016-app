@@ -7,7 +7,9 @@ var element = document.getElementById('main-text');
 element.innerHTML = `
     Let\'s Dance ;) 
     <br/>
-    <p>(Click on the above image to start. Click again to increase speed.)</p>
+    -Click on the above image to start 
+    <br/>
+    -Click again to increase speed
 `;
 
 // Move the image
