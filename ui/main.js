@@ -8,6 +8,7 @@ var stop = document.getElementById('stop');
 var marginLeft = 0;
 var direction = 1;
 var w = document.getElementById('container').offsetWidth-40;
+var interval;
 
 function moveRightLeft() {
     if(marginLeft == w-img.width ) {
@@ -20,7 +21,7 @@ function moveRightLeft() {
     img.style.marginLeft = marginLeft + 'px';
 }
 img.parentElement.onclick = function() {
-    var interval = setInterval(moveRightLeft, 10);
+    interval = setInterval(moveRightLeft, 10);
 };
 
 stop.onclick = function() {
