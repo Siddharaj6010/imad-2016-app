@@ -96,10 +96,10 @@ app.get('/dance', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'dance.html'));
 });
 
-var names = ['name1','name2','name3'];
-app.get('/submit-name/:name', function (req, res) {
+var names = [];
+app.get('/submit-name?:name', function (req, res) {
     //get the name from the request object
-    var name = req.params.name;
+    var name = req.query.name;
     names.push(name);
     res.send(JSON.stringify(names));
     
