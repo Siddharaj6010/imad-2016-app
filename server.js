@@ -13,8 +13,7 @@ var articles = {
         content: `
             <p>
     			This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-    		</p>
-		`
+    		</p>`
     },
     'article-two': {
         title: 'Article Two | Siddharaj Solanki',
@@ -23,8 +22,7 @@ var articles = {
         content: `
             <p>
     			This is the content for my second article. This is the content for my second article. This is the content for my second article. This is the content for my second article. This is the content for my second article. This is the content for my second article. This is the content for my second article. 
-    		</p>
-		`
+    		</p>`
     },
     'article-three': {
         title: 'Article Three | Siddharaj Solanki',
@@ -33,8 +31,7 @@ var articles = {
         content: `
             <p>
     			This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. 
-    		</p>
-		`
+    		</p>`
     }
 };
 
@@ -100,6 +97,6 @@ app.get('/ui/madi.png', function (req, res) {
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
-app.listen(8080, function () {
+app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
