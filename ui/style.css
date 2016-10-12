@@ -11,6 +11,14 @@ body {
     font-size: 300%;
 }
 
+.text-medium {
+    font-size: 200%;
+}
+    
+.text-small {
+    font-size: 100%;
+}
+    
 .bold {
     font-weight: bold;
 }
