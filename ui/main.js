@@ -28,6 +28,6 @@ function moveRightLeft() {
     marginLeft = marginLeft + direction;
     img.style.marginLeft = marginLeft + 'px';
 }
-img.onclick = function() {
+img.parentElement.onclick = function() {
     var interval = setInterval(moveRightLeft, 10);
 };
