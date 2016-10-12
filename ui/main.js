@@ -1,16 +1,5 @@
 console.log('Loaded!');
 
-// Change the text of the main-text div
-
-var element = document.getElementById('main-text');
-
-element.innerHTML = `
-    Let\'s Dance ;) 
-    <br/>
-    -Click on the above image to start 
-    <br/>
-    -Click again to increase speed
-`;
 
 // Move the image
 var img = document.getElementById('img');
