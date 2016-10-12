@@ -79,6 +79,13 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var counter = 0;
+app.get('/counter', function(req, res){
+    counter = counter + 1;
+    //We can only send a string as a response. We can't send a number as a response.
+    res.send(counter.toString());
+});
+
 app.get('/dance', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'dance.html'));
 });
