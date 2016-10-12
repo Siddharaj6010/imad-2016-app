@@ -28,5 +28,5 @@ stop.onclick = function() {
     for(var i=0; i<interval.length; i++){
         clearInterval(interval[i]);   
     }
-    alert(interval.length);
+    //alert(interval.length);
 };
