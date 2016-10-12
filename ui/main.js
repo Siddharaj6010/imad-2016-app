@@ -9,10 +9,17 @@ element.innerHTML = 'New Value';
 // Move the image
 var img = document.getElementById('img');
 var marginLeft = 0;
-function moveRight() {
-    marginLeft = marginLeft + 1;
+var direction = 1;
+function moveRightLeft() {
+    if(marginLeft == 200 ) {
+        direction = -1;
+    } 
+    else if(marginLeft == -200 ) {
+        direction = 1;
+    }
+    marginLeft = marginLeft + direction;
     img.style.marginLeft = marginLeft + 'px';
 }
 img.onclick = function() {
-    var interval = setInterval(moveRight, 100);
+    var interval = setInterval(moveRightLeft, 50);
 };
