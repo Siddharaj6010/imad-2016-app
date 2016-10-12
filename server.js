@@ -5,15 +5,37 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title: 'Article One | Siddharaj Solanki',
-    heading: 'Article One',
-    date: 'Oct 12, 2016',
-    content: `
-        <p>
-			This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-		</p>
-    `
+var articles = {
+    articleOne: {
+        title: 'Article One | Siddharaj Solanki',
+        heading: 'Article One',
+        date: 'Oct 12, 2016',
+        content: `
+            <p>
+    			This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+    		</p>
+		`
+    },
+    articleTwo: {
+        title: 'Article Two | Siddharaj Solanki',
+        heading: 'Article Two',
+        date: 'Oct 13, 2016',
+        content: `
+            <p>
+    			This is the content for my second article. This is the content for my second article. This is the content for my second article. This is the content for my second article. This is the content for my second article. This is the content for my second article. This is the content for my second article. 
+    		</p>
+		`
+    },
+    articleThree: {
+        title: 'Article Three | Siddharaj Solanki',
+        heading: 'Article Three',
+        date: 'Oct 14, 2016',
+        content: `
+            <p>
+    			This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. 
+    		</p>
+		`
+    }
 };
 
 
@@ -65,11 +87,11 @@ app.get('/article-one', function (req, res) {
 });
 
 app.get('/article-two', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+    res.send(createTemplate(articleTwo));
 });
 
 app.get('/article-three', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+    res.send(createTemplate(articleThree));
 });
 
 app.get('/ui/style.css', function (req, res) {
