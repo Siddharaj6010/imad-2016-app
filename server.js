@@ -8,7 +8,7 @@ var config = {
     database: 'siddharaj6010',
     host: 'db.imad.hasura-app.io',
     port: '5432',
-    password: process.env.DB_PASSWORD
+    password: 'db-siddharaj6010-45384'
 };
 
 
